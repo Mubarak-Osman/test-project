@@ -1,0 +1,9 @@
+.timetable-box {
+
+    padding: 60px 80px;
+    background: #c32e4c;
+    -webkit-box-shadow: 0 13px 36px 0 rgba(0,0,0,.23);
+    box-shadow: 0 13px 36px 0 rgba(0,0,0,.23);
+
+
+}

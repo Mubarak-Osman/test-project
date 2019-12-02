@@ -1,0 +1,55 @@
+<html>
+    <head>
+    </head>
+    <body>
+        </p>Create an account. Password must be at least <b>8 character</b>, contain at least <b>two numbers</b>, and <b>two special characters</b></p>
+        <form id="create_accounts" autocomplete="off">
+            Username: <input id="user" type="text" name="user"><br>
+            Password: <input id="pwd" type="password" name="pwd"><br>
+            <button id="register" type="submit" >create account</button>
+        </form>
+        <ans></ans>
+
+        <br/><br/>
+        <form id="list_accounts" autocomplete="off">
+            <button id="show accounts" type="submit" >list accounts</button>
+        </form>
+        <list_ans></list_ans>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $("#create_accounts").submit(function(e) {
+                e.preventDefault();
+
+                $.ajax({
+                  url: "/account",
+                  data: $(this).serialize(),
+                  type: "POST",
+                  success: function(responseData) {
+                      $("ans").html("Account created");
+                  },
+                  error: function(jqXHR, textStatus, errorThrown) {
+                      if (jqXHR.status == 400) {
+                          $("ans").html("<b>Error: Invalid account parameters</b>");
+                      } else {
+                          $("ans").html("<b>Error: Unknown error</b>");
+                      }
+                  }
+                });
+            });
+            $("#list_accounts").submit(function(e) {
+                e.preventDefault();
+
+                $.ajax({
+                  url: "/account",
+                  data: $(this).serialize(),
+                  type: "GET",
+                  success: function(responseData) {
+                      $("list_ans").html("Accounts on record: " + responseData);
+                  },
+                  error: console.error,
+                });
+            });
+        </script>
+    </body>
+</html>

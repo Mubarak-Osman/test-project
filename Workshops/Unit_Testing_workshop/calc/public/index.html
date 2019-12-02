@@ -1,0 +1,44 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <form autocomplete="off">
+            Number1: <input id="num1" type="text" name="num1"><br>
+            Number2: <input id="num2" type="text" name="num2"><br>
+            <button id="add" type="submit" name="add_btn" value="add" onClick="btn_click(this.id)">add</button>
+            <button id="mul" type="submit" name="mul_btn" value="mul" onClick="btn_click(this.id)">mul</button>
+            <input type="hidden" id="op" name="op" value="">
+        </form>
+        <ans></ans>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            function btn_click(clicked) {
+                $("#op").val(clicked);
+            }
+
+            $("form").submit(function(e) {
+                e.preventDefault();
+                op = $("#op").val();
+
+                $.ajax({
+                  url: "/calc",
+                  data: $(this).serialize(),
+                  type: "GET", // if you want to send data via the "data" property change this to "POST". This can be omitted otherwise
+                  success: function(responseData) {
+                      if (op == "add") {
+                          $("ans").html($("#num1").val() + " + " + $("#num2").val() + " = " + responseData);
+                          return;
+                      }
+                      if (op == "mul") {
+                          $("ans").html($("#num1").val() + " * " + $("#num2").val() + " = " + responseData);
+                          return;
+                      }
+
+                      console.error("Unknown op: " + op);
+                  },
+                  error: console.error
+                });
+            });
+        </script>
+    </body>
+</html>

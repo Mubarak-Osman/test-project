@@ -1,0 +1,174 @@
+@font-face {
+    font-family: "icomoon";
+    src: url("fonts/icomoon.eot?y967fo");
+    src: url("fonts/icomoon.eot?y967fo#iefix") format("embedded-opentype"),
+      url("fonts/icomoon.ttf?y967fo") format("truetype"),
+      url("fonts/icomoon.woff?y967fo") format("woff"),
+      url("fonts/icomoon.svg?y967fo#icomoon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"],
+  [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: "icomoon" !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    display: block;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-contact-form:before {
+    content: "\1f582";
+  }
+  .icon-home:before {
+    content: "\1f3da";
+  }
+  .icon-support:before {
+    content: "\1f57b";
+  }
+  .icon-search:before {
+    content: "\1f50e";
+  }
+  .icon-countries:before {
+    content: "\1f310";
+  }
+  .icon-about-us:before {
+    content: "\1f6c8";
+  }
+  
+  html {
+    font-family: "Lato", sans-serif;
+    font-size: 2em;
+    color: white;
+    background-color:gray;
+  }
+  
+  body {
+    background-color:gray;
+    margin-top: 0px;
+    top: 0;
+    width: 100%;
+  }
+  
+  p {
+    background-color: none;
+    margin-left: 1rem;
+    font-weight: 100;
+    font-size: 1rem;
+  }
+  .center {
+    width: 90%;
+  }
+  
+  p + p {
+    color: none;
+    font-size: 1rem;
+  }
+  strong {
+    font-size: 1.5rem;
+  }
+  h1 {
+    font-family: "Fugaz One", cursive;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    margin: 1px;
+    background-color:gray;
+    font-size: 25px;
+  }
+  
+  form {
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    margin: 1px;
+    background-color:gray;
+  }
+  
+  video {
+    position: relative;
+    width: 100%;
+    height: 50;
+  }
+  nav {
+    max-width: 1170px;
+    width: 100%;
+    margin: auto;
+  }
+  img {
+    left: 0;
+    right: 0;
+    width: 250;
+  }
+  
+  #about {
+    position: relative;
+    left: 0%;
+    right: 0;
+  }
+  footer {
+  
+   
+   position: relative;
+    padding: 10px;
+     bottom: 10px;
+     width: 100%;
+     background-color:0;
+     color: white;
+  float: right;
+
+  }
+
+
+  footer ul #copyright {
+    float: right;
+  }
+  
+  a:hover {
+    background: gray;
+  }
+  
+  input {
+    background: white;
+    height: 30px;
+  }
+  
+  .searchimage {
+    position: absolute;
+    top: 52px;
+    left: 10px;
+  }
+  .Navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+  }
+  ul i:hover{
+  color: aqua;
+  }
+  i{
+      display: block;
+  }
+  a{
+      display: block;
+      text-align: center;
+  }
+  ul.my-list{ display: block;
+  }
+ 

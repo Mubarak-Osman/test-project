@@ -1,0 +1,24 @@
+{
+  "name": "functionalprogramming",
+  "version": "1.0.0",
+  "description": "Some Exercises to practice functional programming in JavaScript",
+  "scripts": {
+    "exercise-1": "jest exercise-1.test.js",
+    "exercise-2": "jest exercise-2.test.js",
+    "exercise-3": "jest exercise-3.test.js",
+    "exercise-4": "jest exercise-4.test.js",
+    "exercise-5": "jest exercise-5.test.js",
+    "exercise-6": "jest exercise-6.test.js",
+    "exercise-7": "jest exercise-7.test.js",
+    "exercise-8": "jest exercise-8.test.js",
+    "exercise-9": "jest exercise-9.test.js",
+    "exercise-10": "jest exercise-10.test.js",
+    "test": "jest"
+  },
+  "author": "David Lichtsteiner",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
